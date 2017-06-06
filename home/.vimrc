@@ -170,7 +170,7 @@ if executable('ag')
     nnoremap <leader>G :Ag<SPACE>
   endif
 else
-  echo "Silver surfer not found"
+  echo "Silver searcher not found, please run: brew install the_silver_searcher"
 endif
 
 " Toggle - comment, uses Vim-commentary
