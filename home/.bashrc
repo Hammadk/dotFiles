@@ -59,7 +59,6 @@ PS1="$C_RED\h: $C_BLUE\w $C_GREEN\$(git_prompt) \n$C_DEFAULT\$ "
 
 ##################### Aliases and helper functions
 
-alias vssh='cd ~/vagrant/ && vagrant ssh'
 alias hpc='script/heroku_production run rails console'
 alias tfl='tail -f log/development.log'
 
@@ -136,9 +135,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 if [ $OSTYPE == 'linux-gnu' ]; then
   export PATH=$HOME/npm/bin:$PATH
 fi
-
-export NVM_DIR="/home/vagrant/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 if [[ $OSTYPE = darwin* ]]; then
   if [ -f /opt/dev/dev.sh ]; then
