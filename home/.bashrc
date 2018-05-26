@@ -153,6 +153,10 @@ export PATH=$GOPATH/bin:$PATH
 # Make python3 the default python on mac. Add PATH that contains python shortcuts creates by homebrew
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
+# Activate virtualenv automatically. Installed by 'brew install autoenv'
+source /usr/local/opt/autoenv/activate.sh
+
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/Hammad/google-cloud-sdk/path.bash.inc' ]; then source '/Users/Hammad/google-cloud-sdk/path.bash.inc'; fi
 
