@@ -29,6 +29,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'benmills/vimux'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " Vundle setup
 filetype plugin indent on    " Vundle setup
