@@ -160,9 +160,6 @@ if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-
   " bind Leader g to grep word under cursor
   nnoremap <leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
