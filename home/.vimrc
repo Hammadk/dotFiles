@@ -148,6 +148,10 @@ endfunction
 
 map <leader>e :call RunFile(expand("%"))<cr>
 
+""""""" Faster CTRLP
+" Ignore files from .gitignore https://github.com/kien/ctrlp.vim/issues/273
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " Faster search
 " https://robots.thoughtbot.com/faster-grepping-in-vim
 " https://github.com/ggreer/the_silver_searcher
@@ -157,10 +161,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
   " bind Leader g to grep word under cursor
   nnoremap <leader>g :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
