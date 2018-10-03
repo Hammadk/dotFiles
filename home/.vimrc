@@ -149,6 +149,10 @@ endfunction
 
 map <leader>e :call RunFile(expand("%"))<cr>
 
+" Nerdtree: Automatically open nerd tree if vim opened without any file
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 """"""" Faster CTRLP
 " Ignore files from .gitignore https://github.com/kien/ctrlp.vim/issues/273
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
