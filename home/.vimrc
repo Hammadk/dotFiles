@@ -98,7 +98,10 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Turbux config
-if filereadable("Gemfile")
+if filereadable("dev.yml")
+  let g:turbux_command_prefix = ''
+  let g:turbux_command_test_unit = 'dev test'
+elseif filereadable('Gemfile')
   let g:turbux_command_prefix = 'bundle exec'
 endif
 
