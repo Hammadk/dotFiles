@@ -59,9 +59,6 @@ PS1="$C_RED\h: $C_BLUE\w $C_GREEN\$(git_prompt) \n$C_DEFAULT\$ "
 
 ##################### Aliases and helper functions
 
-alias hpc='script/heroku_production run rails console'
-alias tfl='tail -f log/development.log'
-
 alias r='rails'
 alias be='bundle exec'
 alias bi='bundle install'
@@ -76,7 +73,6 @@ alias st='script/test'
 alias p='python'
 
 alias vimc='vim `git dimn`' # Opens files different than master, Check .gitconfig for 'dimn' alias
-alias spellcheck='grep \".*\" | grep -v "#{" | aspell --sug-mode=normal -a |  uniq' # Find spelling errors in strings surrounded by "quotes"
 
 if [[ $OSTYPE = darwin* ]]; then
   alias ll='ls -alFG'
@@ -88,7 +84,7 @@ elif [ $OSTYPE == 'linux-gnu' ]; then
   alias ls='ls --color=auto -CF'
 fi
 
-alias g='grep --color=always -rnI --exclude-dir=log'
+alias g='grep --color=always -rnI --exclude-dir={git,log,assets,node_modules}'
 
 ##################### Ssh-agent launch
 

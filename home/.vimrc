@@ -4,6 +4,7 @@ filetype off                  " Vundle setup
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Vundle package manager
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
@@ -30,6 +31,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/vim-turbux'
 Plugin 'benmills/vimux'
 Plugin 'scrooloose/nerdtree'
+Plugin 'FelikZ/ctrlp-py-matcher'
 
 call vundle#end()            " Vundle setup
 filetype plugin indent on    " Vundle setup
@@ -156,6 +158,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 """"""" Faster CTRLP
 " Ignore files from .gitignore https://github.com/kien/ctrlp.vim/issues/273
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" Use different matcher
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch'  }
 
 " Faster search
 " https://robots.thoughtbot.com/faster-grepping-in-vim
