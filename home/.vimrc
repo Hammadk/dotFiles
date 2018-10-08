@@ -28,8 +28,13 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'jgdavey/vim-turbux'
+
+" Interact with tmux from vim
 Plugin 'benmills/vimux'
+
+" Vim-turbux builds on vimux and allows TDD for Rails with single key map
+Plugin 'jgdavey/vim-turbux'
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'FelikZ/ctrlp-py-matcher'
 
