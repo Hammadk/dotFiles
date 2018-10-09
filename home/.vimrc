@@ -209,6 +209,7 @@ nmap <leader>d "_d
 " Make Y behave like other capitals
 map Y y$
 
-" Make the vertical border dark gray
+" Remove the vertical border since we have the number column
 set fillchars+=vert:\│
-hi VertSplit ctermfg=Black ctermbg=DarkGray
+hi VertSplit ctermfg=Black ctermbg=None
+set number
