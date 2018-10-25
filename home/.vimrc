@@ -160,8 +160,14 @@ endfunction
 map <leader>e :call RunFile(expand("%"))<cr>
 
 " Nerdtree: Automatically open nerd tree if vim opened without any file
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Syntactic Reset mode
+noremap <leader>s :SyntasticReset<CR>
+
+" NerdTree Toggle mode
+noremap <leader>n :NERDTreeToggle<CR>
 
 """"""" Faster CTRLP
 " Ignore files from .gitignore https://github.com/kien/ctrlp.vim/issues/273

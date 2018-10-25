@@ -84,7 +84,7 @@ elif [ $OSTYPE == 'linux-gnu' ]; then
   alias ls='ls --color=auto -CF'
 fi
 
-alias g='grep --color=always -rnI --exclude-dir={git,log,assets,node_modules}'
+export GREP_OPTIONS='--color=always -rnI --exclude-dir={git,log,assets,node_modules}'
 
 ##################### Ssh-agent launch
 
