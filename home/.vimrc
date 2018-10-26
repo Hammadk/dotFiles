@@ -87,9 +87,6 @@ syntax on
 colorscheme base16-tomorrow
 set background=dark
 
-" Spell settings
-set spellfile=~/.vim/spell/mySpellFile.en.utf-8.add
-
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
