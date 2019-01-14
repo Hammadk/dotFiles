@@ -43,3 +43,5 @@
 	templatedir = ~/.git_template
 [diff]
 	algorithm = patience
+[protocol]
+	version = 2
