@@ -150,7 +150,7 @@ export PATH=$GOPATH/bin:$PATH
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # Activate virtualenv automatically. Installed by 'brew install autoenv'
-source /usr/local/opt/autoenv/activate.sh
+# source /usr/local/opt/autoenv/activate.sh
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -158,3 +158,4 @@ if [ -f '/Users/Hammad/google-cloud-sdk/path.bash.inc' ]; then source '/Users/Ha
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Hammad/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/Hammad/google-cloud-sdk/completion.bash.inc'; fi
+alias ctags='/usr/local/bin/ctags'
