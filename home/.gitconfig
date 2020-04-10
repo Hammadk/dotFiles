@@ -10,8 +10,8 @@
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
   dc="diff --cached"
   di="diff"
-  dim="diff origin/master"
-  dimn="diff --name-only origin/master"
+  dim="diff master..."
+  dimn="diff --name-status master..."
   co="checkout"
   com="checkout master"
   ci="commit -v"
@@ -48,8 +48,6 @@
 	algorithm = patience
 [protocol]
 	version = 2
-[credential]
-	helper = osxkeychain
 [url "https://github.com/Shopify/"]
 	insteadOf = git@github.com:Shopify/
 	insteadOf = git@github.com:shopify/
@@ -57,3 +55,5 @@
 	insteadOf = ssh://git@github.com/shopify/
 [gc]
 	writeCommitGraph = true
+[credential]
+	helper = store --file /opt/dev/var/private/git_credential_store
