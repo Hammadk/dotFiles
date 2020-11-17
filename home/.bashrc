@@ -4,7 +4,7 @@ C_WHITE="\[\033[1m\]"
 C_BLACK="\[\033[30m\]"
 C_RED="\[\033[31m\]"
 C_GREEN="\[\033[32m\]"
-C_YELLOW="\[\033[33m\]"
+C_YELLOw="\[\033[33m\]"
 C_BLUE="\[\033[34m\]"
 C_PURPLE="\[\033[35m\]"
 C_LIGHTGRAY="\[\033[37m\]"
@@ -55,7 +55,7 @@ git_prompt() {
   fi
 }
 
-PS1="$C_RED\h: $C_BLUE\w $C_GREEN\$(git_prompt) \n$C_DEFAULT\$ "
+PS1="$C_DEFAULT\h: $C_PURPLE\w $C_BLUE\$(git_prompt) \n$C_DEFAULT\$ "
 
 ##################### Aliases and helper functions
 

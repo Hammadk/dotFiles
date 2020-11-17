@@ -39,11 +39,12 @@ Plug 'benmills/vimux'
 " Vim-turbux builds on vimux and allows TDD for Rails with single key map
 Plug 'jgdavey/vim-turbux'
 
+" Set dark material theme
+" https://github.com/material-theme/vsc-material-theme#official-portings
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+
 " Initialize plugin system
 call plug#end()
-" call vundle#end()            " Vundle setup
-"
-" filetype plugin indent on    " Vundle setup
 
 set encoding=utf8
 set nobackup
@@ -72,6 +73,10 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+" Color scheme settings.
+syntax on
+colorscheme material
+
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -85,11 +90,6 @@ set hlsearch
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
-
-" Color scheme settings.
-syntax on
-colorscheme base16-tomorrow
-set background=dark
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -110,18 +110,8 @@ endif
 let g:turbux_test_type = ''
 
 " Airline config
-let g:airline_theme='tomorrow'
+let g:airline_theme='material'
 let g:airline_powerline_fonts = 1
-
-" Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 " Rename current file
 function! RenameFile()
@@ -161,15 +151,11 @@ endfunction
 map <leader>e :call RunFile(expand("%"))<cr>
 
 " Nerdtree: Automatically open nerd tree if vim opened without any file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Syntactic Reset mode
-" noremap <leader>s :SyntasticReset<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NerdTree Toggle mode
 noremap <leader>n :NERDTreeToggle<CR>
-
 
 " Faster search
 " https://robots.thoughtbot.com/faster-grepping-in-vim
