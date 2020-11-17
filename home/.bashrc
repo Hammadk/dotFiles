@@ -67,7 +67,11 @@ alias st='script/test'
 
 alias p='python'
 
-alias vimc='vim `git dimn`' # Opens files different than master, Check .gitconfig for 'dimn' alias
+# Opens files different than master, Check .gitconfig for 'dimn' alias
+alias vimdim='vim `git dimn | sed s/^...//`'
+
+# Open modified files in new tabs
+alias vimc='vim -p `git status --porcelain | sed s/^...//`'
 
 if [[ $OSTYPE = darwin* ]]; then
   alias ll='ls -alFG'

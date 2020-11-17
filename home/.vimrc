@@ -98,6 +98,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" Ale config
+highlight ALEWarning ctermbg=DarkGray
+
 " Turbux config
 if filereadable("dev.yml")
   let g:turbux_command_prefix = ''
@@ -175,6 +178,13 @@ if executable('ag')
 else
   echo "Silver searcher not found, please run: brew install the_silver_searcher"
 endif
+
+" Change the default behaviour of the quickfix window so items are opened in a
+" new tab unless they are already opened in a tab
+set switchbuf+=usetab,newtab
+
+" Disable visual bell in Vim
+set t_vb=
 
 " Toggle - comment, uses Vim-commentary
 nmap <C-\> gcc<ESC>
