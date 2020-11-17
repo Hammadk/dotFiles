@@ -55,18 +55,13 @@ git_prompt() {
   fi
 }
 
-PS1="$C_DEFAULT\h: $C_PURPLE\w $C_BLUE\$(git_prompt) \n$C_DEFAULT\$ "
+PS1="$C_PURPLE\w $C_BLUE\$(git_prompt) \n$C_DEFAULT\$ "
 
 ##################### Aliases and helper functions
 
 alias r='rails'
 alias be='bundle exec'
 alias bi='bundle install'
-alias berc='bundle exec rails c'
-alias bers='bundle exec rails s'
-alias bert='bundle exec rake test:all'
-alias beri='bundle exec ruby -Itest'
-alias berj='bundle exec rake teaspoon'
 alias ss='script/server'
 alias st='script/test'
 
