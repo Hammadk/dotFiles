@@ -1,45 +1,49 @@
 set nocompatible              " Vundle setup
 filetype off                  " Vundle setup
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Vim-plug for package management
+" :PlugInstall
 
-" Vundle package manager
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal"
+" Dependencies:
+" brew install fzf, for fuzzy file search
+" brew install bat, a cat alternative with syntax highlighting
+" brew install the_silver_searcher, a faster searcher
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'chriskempson/base16-vim'
-Plugin 'lilydjwg/colorizer'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'fatih/vim-go'
-Plugin 'pangloss/vim-javascript'
-Plugin 'thoughtbot/vim-rspec'
+call plug#begin('~/.vim/plugged')
+
+Plug 'jiangmiao/auto-pairs'
+Plug 'chriskempson/base16-vim'
+Plug 'lilydjwg/colorizer'
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
+Plug 'thoughtbot/vim-rspec'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+
+" Git and Github integrations. Rhubarb is needed for :GBrowse
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Interact with tmux from vim
-Plugin 'benmills/vimux'
+Plug 'benmills/vimux'
 
 " Vim-turbux builds on vimux and allows TDD for Rails with single key map
-Plugin 'jgdavey/vim-turbux'
+Plug 'jgdavey/vim-turbux'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'FelikZ/ctrlp-py-matcher'
-
-call vundle#end()            " Vundle setup
-filetype plugin indent on    " Vundle setup
+" Initialize plugin system
+call plug#end()
+" call vundle#end()            " Vundle setup
+"
+" filetype plugin indent on    " Vundle setup
 
 set encoding=utf8
 set nobackup
@@ -161,17 +165,11 @@ map <leader>e :call RunFile(expand("%"))<cr>
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Syntactic Reset mode
-noremap <leader>s :SyntasticReset<CR>
+" noremap <leader>s :SyntasticReset<CR>
 
 " NerdTree Toggle mode
 noremap <leader>n :NERDTreeToggle<CR>
 
-""""""" Faster CTRLP
-" Ignore files from .gitignore https://github.com/kien/ctrlp.vim/issues/273
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" Use different matcher
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch'  }
 
 " Faster search
 " https://robots.thoughtbot.com/faster-grepping-in-vim
@@ -203,8 +201,8 @@ ca t tabnew
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Browse open buffers
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>f :CtrlP<CR>
+nmap <leader>b :Buffers<CR>
+nmap <Leader>f :Files<CR>
 
 "Have leader D just delete the line
 nmap <leader>d "_d
