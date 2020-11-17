@@ -55,7 +55,7 @@ git_prompt() {
   fi
 }
 
-PS1="$C_PURPLE\w $C_BLUE\$(git_prompt) \n$C_DEFAULT\$ "
+PS1="$C_PURPLE\w $C_GREEN\$(git_prompt) \n$C_DEFAULT\$ "
 
 ##################### Aliases and helper functions
 
@@ -68,7 +68,7 @@ alias st='script/test'
 alias p='python'
 
 # Opens files different than master, Check .gitconfig for 'dimn' alias
-alias vimdim='vim `git dimn | sed s/^...//`'
+alias vimd='vim -p `git dimn | sed s/^..//`'
 
 # Open modified files in new tabs
 alias vimc='vim -p `git status --porcelain | sed s/^...//`'
