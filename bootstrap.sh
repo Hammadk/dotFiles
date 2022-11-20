@@ -1,7 +1,6 @@
 #!/bin/bash
-# Links everything in dotFiles/home/ to ~/, does sanity checks.
-# Originally from Simon Eskildsen (github.com/Sirupsen)
-# Just run: bash linker.sh, and it will create symlinks for files in the dotFiles/home folder
+# Links everything in dotFiles/home/ to ~/, does sanity checks. Run bash
+# bootstrap.sh, and it will create symlinks for files in the dotFiles/home folder
 # unless they exist in ~/ already.
 
 symlink() {

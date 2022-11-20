@@ -1,0 +1,69 @@
+{
+  "_comment": "This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/settings.json",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "window.zoomLevel": 1,
+  "terminal.integrated.fontSize": 14,
+
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "none",
+
+  "editor.renderWhitespace": "all",
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.foldingMaximumRegions": 30000,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.rulers": [
+    120
+  ],
+
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.tabSize": 2
+  },
+
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.fileListLayout": "tree",
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    }
+  ],
+
+  "explorer.confirmDelete": false,
+
+  "debug.confirmOnExit": "always",
+  "debug.internalConsoleOptions": "neverOpen",
+
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 3000,
+  "files.trimTrailingWhitespace": true,
+
+  "byesig.fold": false,
+  "byesig.enabled": true,
+  "byesig.opacity": 0.5,
+  "byesig.showIcon": false,
+
+  "search.exclude": {
+    ".git": true,
+    "*.log": true,
+    "*.rbi": true,
+  },
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.rbi": true
+  },
+  "files.insertFinalNewline": true,
+}
