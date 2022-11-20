@@ -75,7 +75,10 @@ set expandtab
 
 " Color scheme settings.
 syntax on
-colorscheme material
+
+if has("mac")
+  colorscheme material
+endif
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -113,8 +116,10 @@ endif
 let g:turbux_test_type = ''
 
 " Airline config
-let g:airline_theme='material'
-let g:airline_powerline_fonts = 1
+if has("mac")
+  let g:airline_theme='material'
+  let g:airline_powerline_fonts = 1
+endif
 
 " Rename current file
 function! RenameFile()
@@ -176,7 +181,9 @@ if executable('ag')
     nnoremap <leader>G :Ag<SPACE>
   endif
 else
-  echo "Silver searcher not found, please run: brew install the_silver_searcher"
+  if has("mac")
+    echo "Silver searcher not found, please run: brew install the_silver_searcher"
+  endif
 endif
 
 " Change the default behaviour of the quickfix window so items are opened in a
