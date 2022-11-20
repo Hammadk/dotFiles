@@ -158,3 +158,7 @@ if [ -f '/Users/Hammad/google-cloud-sdk/path.bash.inc' ]; then source '/Users/Ha
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Hammad/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/Hammad/google-cloud-sdk/completion.bash.inc'; fi
 alias ctags='/usr/local/bin/ctags'
+
+[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
+
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
