@@ -51,3 +51,4 @@ venv
 staticfiles
 .env
 .byebug_history
+.hammad_todo.md
