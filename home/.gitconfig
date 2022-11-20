@@ -7,22 +7,23 @@
   b="branch"
   ba="branch --all"
   bsort="for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop|main' | xargs -n 1 git branch -d"
   dc="diff --cached"
   di="diff"
-  dim="diff master..."
-  dimn="diff --name-status master..."
+  dim="diff main..."
+  dimn="diff --name-status main..."
   co="checkout"
-  com="checkout master"
+  com="checkout main"
   ci="commit -v"
   cp="cherry-pick -n"
   lg=log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   g=log --date-order --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset' --graph
   ga=log --date-order --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset' --graph --all
+  lgd="lg -10"
   pl="pull"
   ph="push"
   rb="rebase"
-  rbm="rebase master"
+  rbm="rebase main"
   rbc="rebase --continue"
   st="status"
   ss="status --short"
@@ -33,7 +34,6 @@
 [core]
   editor = vim
 	excludesfile = ~/.gitignore
-	commitGraph = true
 [color]
   ui = true
 [github]
@@ -44,17 +44,7 @@
 	rebase = true
 [init]
 	templatedir = ~/.git_template
-[diff]
-	algorithm = patience
-[protocol]
-	version = 2
-[url "https://github.com/Shopify/"]
-	insteadOf = git@github.com:Shopify/
-	insteadOf = git@github.com:shopify/
-	insteadOf = ssh://git@github.com/Shopify/
-	insteadOf = ssh://git@github.com/shopify/
-[gc]
-	writeCommitGraph = true
-[credential]
-	helper = 
-	helper = store --file /opt/dev/var/private/git_credential_store
+[include]
+	path = /Users/hammad/.config/dev/gitconfig
+[commit]
+	gpgsign = true
