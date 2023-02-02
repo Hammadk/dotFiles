@@ -15,3 +15,16 @@ Once `bootstrap.sh` is run, you'll see output that looks like:
 -e ~/.irbrc is symlinked to your dotfiles.
 -e ~/.tmux-mac.conf is symlinked to your dotfiles.
 ```
+
+Mac Utilities:
+
+``` sh
+brew install tmux
+brew install reattach-to-user-namespace # needed for Tmux
+
+# Dependency for AG
+brew install the_silver_searcher
+
+# Fuzzy search for vim
+brew install fzf
+```

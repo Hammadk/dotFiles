@@ -1,0 +1,41 @@
+// This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/keybindings.json",
+[
+  {
+    "key": "ctrl+alt+z",
+    "command": "-DevTestRunner.runLastTest",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "-DevTestRunner.runTestCase",
+    "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/"
+  },
+  {
+    "key": "\\ t",
+    "command": "DevTestRunner.runLastTest",
+    "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /^(?!.*_(test|spec)[.]rb$).*$/"
+  },
+  {
+    "key": "\\ shift+t",
+    "command": "DevTestRunner.runTestCase",
+    "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/ || editorTextFocus && resourceExtname == '.tsx' && resourceFilename =~ /.test.tsx/"
+  },
+  {
+    "key": "\\ t",
+    "command": "DevTestRunner.runAllTests",
+    "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/ || editorTextFocus && resourceExtname == '.tsx' && resourceFilename =~ /.test.tsx/"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-DevTestRunner.runAllTests",
+    "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/ || editorTextFocus && resourceExtname == '.tsx' && resourceFilename =~ /.test.tsx/"
+  },
+  {
+    "key": "cmd+4",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "cmd+4",
+    "command": "-workbench.action.focusFourthEditorGroup"
+  },
+]
