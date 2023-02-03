@@ -1,4 +1,5 @@
 // This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/keybindings.json",
+// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+alt+z",
@@ -13,7 +14,7 @@
   {
     "key": "\\ t",
     "command": "DevTestRunner.runLastTest",
-    "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /^(?!.*_(test|spec)[.]rb$).*$/"
+    "when": "resourceFilename =~ /^(?!.*_(test|spec)[.]rb$).*$/"
   },
   {
     "key": "\\ shift+t",
@@ -39,3 +40,4 @@
     "command": "-workbench.action.focusFourthEditorGroup"
   },
 ]
+
