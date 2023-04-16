@@ -10,6 +10,7 @@ sh bootstrap.sh
 ```
 
 Once `bootstrap.sh` is run, you'll see output that looks like:
+``` sh
 -e ~/.inputrc does not exist. Symlinking to dotfile.
 -e ~/.irbrc is symlinked to your dotfiles.
 -e ~/.tmux-mac.conf is symlinked to your dotfiles.
