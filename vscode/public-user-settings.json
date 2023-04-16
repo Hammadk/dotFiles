@@ -2,7 +2,6 @@
   "_comment": "This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/settings.json",
   "editor.fontSize": 14,
   "editor.tabSize": 2,
-  "window.zoomLevel": 1,
   "terminal.integrated.fontSize": 14,
 
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -22,6 +21,16 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+  },
+
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
   },
 
   "githubPullRequests.pullBranch": "never",
@@ -30,6 +39,14 @@
     {
       "label": "Waiting For My Review",
       "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Reviewed By Me",
+      "query": "is:open reviewed-by:${user}"
+    },
+    {
+      "label": "Not Reviewed By Me",
+      "query": "is:open -reviewed-by:${user}"
     },
     {
       "label": "Created By Me",
@@ -64,4 +81,14 @@
     "**/*.rbi": true
   },
   "files.insertFinalNewline": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "workbench.commandPalette.history": 500,
+  "window.zoomLevel": 1,
+  "devTestRunner.command": "DISABLE_SPRING=1 dev test",
+  "terminal.integrated.scrollback": 50000,
+  "editor.wordWrap": "on",
+  "editor.stickyScroll.enabled": true,
+  "workbench.panel.defaultLocation": "right",
 }
