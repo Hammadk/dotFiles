@@ -31,7 +31,7 @@ brew install fzf
 Mac nice-to-haves:
 ```
 1. Install Terminal themes in dotfiles/themes
-2. Install Fonts in dotfiles/fonts
+2. Install Fonts from dotfiles/fonts
 ```
 
 Vim installation:
