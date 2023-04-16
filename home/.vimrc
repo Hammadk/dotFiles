@@ -28,6 +28,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 
+" Requires calling :Copilot
+Plug 'github/copilot.vim'
+
 " Git and Github integrations. Rhubarb is needed for :GBrowse
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
