@@ -45,3 +45,11 @@ Vscode installation:
 1. Copy vscode/public-keybindings.json
 2. Copy vscode/public-user-settings.json
 ```
+
+Mac settings:
+```
+Keyboard:
+* Key repeat rate: fastest
+* Delay until repeat: Slowest
+* Modifer: Capslock -> No action
+```
