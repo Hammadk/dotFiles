@@ -53,3 +53,14 @@ Keyboard:
 * Delay until repeat: Slowest
 * Modifer: Capslock -> No action
 ```
+
+Font installation for powerline:
+```
+You need to get fonts modified for powerline. Ones that are compatible with
+vim-airline:
+
+1. git clone https://github.com/Znuff/consolas-powerline.git
+2. Install all fonts.
+3. Configure your Terminal or iTerm2 to use the installed Powerline font. iTerm2 -> Preferences -> Profiles -> Text
+```
+
