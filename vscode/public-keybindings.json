@@ -1,5 +1,4 @@
-// This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/keybindings.json",
-// Place your key bindings in this file to override the defaultsauto[]
+// This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/keybindings.json"
 [
   {
     "key": "ctrl+alt+z",
@@ -19,7 +18,14 @@
   {
     "key": "\\ shift+t",
     "command": "DevTestRunner.runLastTest",
-    "when": "!editorTextFocus || resourceFilename =~ /^(?!.*_(test|spec)[.]rb$).*$/"
+    "when": "!editorTextFocus || resourceFilename =~ 3^(?!.*_(test|spec)[.]rb$).*$/"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "type",
+    "args": {
+      "text": "\\"
+    }
   },
   {
     "key": "\\ shift+t",
@@ -45,11 +51,11 @@
     "command": "-workbench.action.focusFourthEditorGroup"
   },
   {
-    "key": "\\ f",
+    "key": "\\ r",
     "command": "editor.action.referenceSearch.trigger"
   },
   {
-    "key": "\\ shift+f",
+    "key": "\\ shift+d",
     "command": "editor.action.peekDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
@@ -217,6 +223,32 @@
     "key": "pageup",
     "command": "-workbench.action.terminal.selectPrevPageSuggestion",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
-  }
+  },
+  {
+    "key": "\\ d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "\\ d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "type",
+    "args": {
+        "text": "\\"
+    }
+}
 ]
-
