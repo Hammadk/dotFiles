@@ -52,7 +52,7 @@ set encoding=utf8
 set nobackup
 set nowritebackup
 set noswapfile
-set visualbell
+set t_vb=                  " Disable visual bell in Vim
 set ruler                  " Show cursor position at all times
 set showcmd                " Display incomplete commands
 set laststatus=2           " Always display the status line
@@ -192,9 +192,6 @@ endif
 " new tab unless they are already opened in a tab
 set switchbuf+=usetab,newtab
 
-" Disable visual bell in Vim
-set t_vb=
-
 " Toggle - comment, uses Vim-commentary
 nmap <C-\> gcc<ESC>
 vmap <C-\> gcc<ESC>
@@ -207,7 +204,8 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Browse open buffers
 nmap <leader>b :Buffers<CR>
-nmap <Leader>f :Files<CR>
+nmap <leader>f :Files<CR>
+nnoremap <leader>r :Tags <c-r><c-w><CR>
 
 "Have leader D just delete the line
 nmap <leader>d "_d
