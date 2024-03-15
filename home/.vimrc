@@ -1,6 +1,3 @@
-set nocompatible              " Vundle setup
-filetype off                  " Vundle setup
-
 " Vim-plug for package management
 " :PlugInstall
 
@@ -159,10 +156,6 @@ function! RunFile(filename)
 endfunction
 
 map <leader>e :call RunFile(expand("%"))<cr>
-
-" Nerdtree: Automatically open nerd tree if vim opened without any file
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " NerdTree Toggle mode
 noremap <leader>n :NERDTreeToggle<CR>
