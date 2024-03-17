@@ -1,0 +1,7 @@
+tell application "System Events"
+	if not (exists (process "Visual Studio Code")) then
+		tell application "Visual Studio Code" to activate
+	else
+		set frontmost of process "Visual Studio Code" to true
+	end if
+end tell

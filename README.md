@@ -52,6 +52,9 @@ Keyboard:
 * Key repeat rate: fastest
 * Delay until repeat: Slowest
 * Modifer: Capslock -> No action
+* Automator: Cmd + shift + 1 -> GPT
+* Automator: Cmd + shift + 2 -> Code Editor
+* Automator: Cmd + shift + 3 -> Notes
 ```
 
 Font installation for powerline:

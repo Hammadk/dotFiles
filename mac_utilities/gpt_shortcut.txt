@@ -1,0 +1,28 @@
+tell application "Google Chrome"
+    activate
+    set theURL to "http://www.google.com" -- replace with your desired URL
+    set found to false
+    set theTabIndex to -1
+    repeat with w in every window
+        set theTabIndex to 0
+        repeat with t in every tab of w
+            set theTabIndex to theTabIndex + 1
+            if the URL of t is theURL then
+                set found to true
+                exit
+            end if
+        end repeat
+        if found then
+            exit
+        end if
+    end repeat
+    if found then
+        tell window 1
+            set active tab index to theTabIndex
+        end tell
+    else
+        tell window 1
+            make new tab with properties {URL:theURL}
+        end tell
+    end if
+end tell
