@@ -1,28 +1,32 @@
 tell application "Google Chrome"
-    activate
-    set theURL to "http://www.google.com" -- replace with your desired URL
-    set found to false
-    set theTabIndex to -1
-    repeat with w in every window
-        set theTabIndex to 0
-        repeat with t in every tab of w
-            set theTabIndex to theTabIndex + 1
-            if the URL of t is theURL then
-                set found to true
-                exit
-            end if
-        end repeat
-        if found then
-            exit
-        end if
-    end repeat
-    if found then
-        tell window 1
-            set active tab index to theTabIndex
-        end tell
-    else
-        tell window 1
-            make new tab with properties {URL:theURL}
-        end tell
-    end if
+	activate
+	set theURL to "https://chat.openai.com" -- change to desired tab
+	set found to false
+	set theTabIndex to -1
+	set theWindowIndex to -1
+	repeat with w from 1 to (count windows)
+		set theTabIndex to 0
+		repeat with t from 1 to (count tabs of window w)
+			set theTabIndex to theTabIndex + 1
+			if the URL of tab t of window w starts with theURL then
+				set found to true
+				set theWindowIndex to w
+				exit repeat
+			end if
+		end repeat
+		if found then
+			exit repeat
+		end if
+	end repeat
+	if found then
+		tell window theWindowIndex
+			set active tab index to theTabIndex
+			set index to theWindowIndex -- Brings the window with the found tab to the front
+		end tell
+	else
+		tell window 1
+			make new tab with properties {URL:theURL}
+		end tell
+	end if
 end tell
+
