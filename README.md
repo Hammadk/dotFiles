@@ -55,7 +55,8 @@ Keyboard:
 * Automator: Cmd + shift + 1 -> GPT
 * Automator: Cmd + shift + 2 -> Code Editor
 * Automator: Cmd + shift + 3 -> Notes
-* Disable default Cmd + shift + 3 screenshot shortcut
+* Disable default Cmd + shift + 3 -> screenshot shortcut
+* option + space -> Iterm
 ```
 
 Font installation for powerline:
