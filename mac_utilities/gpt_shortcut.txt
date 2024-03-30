@@ -5,6 +5,9 @@ tell application "Google Chrome"
 	set theTabIndex to -1
 	set theWindowIndex to -1
 
+	-- Requires opening Google Chrome -> View -> Developer -> Allow JS from Apple Script
+	set scriptToFocusOnTextArea to "document.getElementById('prompt-textarea').focus();"
+
 	-- Check if there are any open windows, if not create one
 	if (count windows) is equal to 0 then
 		make new window
@@ -29,10 +32,13 @@ tell application "Google Chrome"
 		tell window theWindowIndex
 			set active tab index to theTabIndex
 			set index to theWindowIndex -- Brings the window with the found tab to the front
+			execute tab theTabIndex javascript scriptToFocusOnTextArea
 		end tell
 	else
 		tell window 1
-			make new tab with properties {URL:theURL}
+			set newTab to make new tab with properties {URL:theURL}
+			delay 1 -- Adjust delay to allow the page to load
+			execute newTab javascript scriptToFocusOnTextArea
 		end tell
 	end if
 end tell
