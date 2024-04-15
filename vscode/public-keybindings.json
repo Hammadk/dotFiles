@@ -1,4 +1,5 @@
 // This files is typically kept in Users/USER_NAME/Library/ApplicationSupport/Code/User/keybindings.json"
+// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+alt+z",
@@ -28,12 +29,12 @@
     }
   },
   {
-    "key": "\\ shift+t",
+    "key": "\\ t",
     "command": "DevTestRunner.runTestCase",
     "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/ || editorTextFocus && resourceExtname == '.tsx' && resourceFilename =~ /.test.tsx/"
   },
   {
-    "key": "\\ t",
+    "key": "\\ shift+t",
     "command": "DevTestRunner.runAllTests",
     "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/ || editorTextFocus && resourceExtname == '.tsx' && resourceFilename =~ /.test.tsx/"
   },
@@ -43,11 +44,11 @@
     "when": "editorTextFocus && resourceExtname == '.rb' && resourceFilename =~ /_(test|spec).rb/ || editorTextFocus && resourceExtname == '.tsx' && resourceFilename =~ /.test.tsx/"
   },
   {
-    "key": "cmd+4",
+    "key": "cmd+3",
     "command": "terminal.focus"
   },
   {
-    "key": "cmd+4",
+    "key": "cmd+3",
     "command": "-workbench.action.focusFourthEditorGroup"
   },
   {
@@ -65,7 +66,7 @@
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "notebook.cell.cursorPageDown",
     "when": "editorTextFocus && inputFocus && notebookEditorFocused"
   },
@@ -75,7 +76,7 @@
     "when": "editorTextFocus && inputFocus && notebookEditorFocused"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "workbench.action.terminal.scrollDownPage",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
@@ -85,7 +86,7 @@
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "cursorPageDown",
     "when": "textInputFocus"
   },
@@ -95,7 +96,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "list.focusPageDown",
     "when": "listFocus && !inputFocus"
   },
@@ -105,7 +106,7 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "notifications.focusLastToast",
     "when": "notificationFocus && notificationToastsVisible"
   },
@@ -115,7 +116,7 @@
     "when": "notificationFocus && notificationToastsVisible"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "selectNextPageSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
@@ -125,7 +126,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "workbench.action.interactivePlayground.pageDown",
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
@@ -135,7 +136,7 @@
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+cmd+n",
     "command": "workbench.action.terminal.selectNextPageSuggestion",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
@@ -145,7 +146,7 @@
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "notebook.cell.cursorPageUp",
     "when": "editorTextFocus && inputFocus && notebookEditorFocused"
   },
@@ -155,7 +156,7 @@
     "when": "editorTextFocus && inputFocus && notebookEditorFocused"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "workbench.action.terminal.scrollUpPage",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
@@ -165,7 +166,7 @@
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "cursorPageUp",
     "when": "textInputFocus"
   },
@@ -175,7 +176,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "list.focusPageUp",
     "when": "listFocus && !inputFocus"
   },
@@ -185,7 +186,7 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "notifications.focusFirstToast",
     "when": "notificationFocus && notificationToastsVisible"
   },
@@ -195,7 +196,7 @@
     "when": "notificationFocus && notificationToastsVisible"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "selectPrevPageSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
@@ -205,7 +206,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "workbench.action.interactivePlayground.pageUp",
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
@@ -215,7 +216,7 @@
     "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+cmd+p",
     "command": "workbench.action.terminal.selectPrevPageSuggestion",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
   },
@@ -250,5 +251,29 @@
     "args": {
         "text": "\\"
     }
+},
+{
+  "key": "cmd+4",
+  "command": "workbench.panel.chat.view.copilot.focus"
+},
+{
+  "key": "ctrl+shift+p",
+  "command": "cursorUpSelect",
+  "when": "textInputFocus"
+},
+{
+  "key": "ctrl+shift+n",
+  "command": "cursorDownSelect",
+  "when": "textInputFocus"
+},
+{
+  "key": "ctrl+shift+b",
+  "command": "cursorLeftSelect",
+  "when": "textInputFocus"
+},
+{
+  "key": "ctrl+shift+f",
+  "command": "cursorRightSelect",
+  "when": "textInputFocus"
 }
 ]
